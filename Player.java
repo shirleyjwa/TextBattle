@@ -12,7 +12,7 @@ public class Player{
         this.maxDamage= maxDamage;
     }
     //Accessors
-    public String getName(String name){
+    public String getName(){
         return name;
     }
     public int getHealth(){ 
@@ -47,6 +47,6 @@ public class Player{
     public void attack(Player enemy){
         int randomDamage= (int)(Math.random()*(maxDamage-minDamage+1)+ minDamage); //random amount of damage
         enemy.receiveDamage(randomDamage);
-        System.out.println(name+" attacks the "+enemy+" doing "+randomDamage+" damage.");
+        System.out.println(name+" attacks the "+enemy.getName()+" doing "+randomDamage+" damage.");
     }
 }
