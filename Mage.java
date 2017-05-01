@@ -13,10 +13,10 @@ public class Mage extends Hero{
             System.out.println("Not enough mana!");
         } else {
             System.out.println(name+" has "+mana+" mana left.");
-            System.out.println(name+" attacks "+enemy+" doing "+randomDamage+" damage.");
+            System.out.println(name+" attacks "+enemy.getName()+" doing "+randomDamage+" damage.");
             enemy.receiveDamage(randomDamage);
             mana-=10;
-            System.out.println(enemy+" has "+enemy.getHealth()+" health left.");
+            System.out.println(enemy.getName()+" has "+enemy.getHealth()+" health left.");
         }
     }
     public void useItem(int choice){
@@ -28,4 +28,5 @@ public class Mage extends Hero{
         }
     }
 }
+   
         
