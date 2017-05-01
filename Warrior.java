@@ -10,13 +10,13 @@ public class Warrior extends Hero{
         int randomDamage= (int)(Math.random()*(maxDamage-minDamage+1)+minDamage);
         if (Math.random() >= critChance){
             System.out.println(name+" gets a critical hit!");
-            System.out.println(name+" attacks "+enemy+" doing "+2*randomDamage+" damage.");
+            System.out.println(name+" attacks "+enemy.getName()+" doing "+2*randomDamage+" damage.");
             enemy.receiveDamage(2*randomDamage);
-            System.out.println(enemy+" has "+enemy.getHealth()+" health left.");
+            System.out.println(enemy.getName()+" has "+enemy.getHealth()+" health left.");
         } else {
             System.out.println(name+" attacks "+enemy+" doing "+randomDamage+" damage.");
             enemy.receiveDamage(randomDamage);
-            System.out.println(enemy+" has "+enemy.getHealth()+" health left.");
+            System.out.println(enemy.getName()+" has "+enemy.getHealth()+" health left.");
         }
     }
 }
