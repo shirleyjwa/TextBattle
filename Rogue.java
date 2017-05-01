@@ -12,9 +12,9 @@ public class Rogue extends Hero{
         if (Math.random()<secondAttackChance){
             super.attack(enemy);
             System.out.println(name+" gets a double attack!");
-            System.out.println(name+" attacks "+enemy+" doing "+randomDamage+" damage.");
+            System.out.println(name+" attacks "+enemy.getName()+" doing "+randomDamage+" damage.");
             enemy.receiveDamage(randomDamage);
-            System.out.println(enemy+" has "+enemy.getHealth()+" health left.");
+            System.out.println(enemy.getName()+" has "+enemy.getHealth()+" health left.");
         } else {
             super.attack(enemy);
         }
