@@ -11,7 +11,7 @@ public class Hero extends Player{
         if (inventory[choice-1].equals("Health potion")){
             int newHealth= super.getHealth()+20;
             super.setHealth(newHealth);
-            System.out.println(name+" now has "+newHealth+"health");
+            System.out.println(name+" now has "+newHealth+" health");
             inventory[choice-1]= "empty";
         } else if (inventory[choice-1].equals("Damage potion")){
             int newMaxDamage= super.getMaxDamage()+10;
