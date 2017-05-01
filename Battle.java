@@ -31,7 +31,7 @@ public class Battle{
         } else if (a>=0.75 && a<1){
             evil= new Player("tiger", 80, 10, 20);
         }
-        System.out.println(name+" has encountered a "+evil);
+        System.out.println(name+" has encountered a "+evil.getName());
         //Battle
         int round= 1;
         while (evil.getHealth()>0 && good.getHealth()>0){
@@ -55,9 +55,9 @@ public class Battle{
         }
         //Ending
         if (good.getHealth()==0){
-            System.out.println("The "+evil+" has defeated "+good);
+            System.out.println("The "+evil.getName()+" has defeated "+good.getName());
         } else if (evil.getHealth()==0){
-            System.out.println("The "+good+" has defeated "+evil);
+            System.out.println("The "+good.getName()+" has defeated "+evil.getName());
         }
     }
 }
